@@ -15,7 +15,8 @@ public class SpawnManager : MonoBehaviour
         {
             if (dogPrefabs[index] != null)
             {
-                Instantiate(dogPrefabs[index], new Vector3(x, 0, 20), Quaternion.Euler(0, 180, 0));
+                var dog = Instantiate(dogPrefabs[index], new Vector3(x, 0, 20), Quaternion.Euler(0, 180, 0));
+                Destroy(dog, 10f);
             }
             else
             {
